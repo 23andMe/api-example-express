@@ -1,0 +1,9 @@
+{
+    "name": "api-example-express",
+    "description": "An example Node.js/Express app on 23andMe's API",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "3.x"
+    }
+}
