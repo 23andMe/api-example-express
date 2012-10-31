@@ -14,3 +14,9 @@
 a {
     color: #659EC7;
 }
+.button.secondary {
+    background-color: #fffbe3;
+}
+.button.secondary:hover {
+    background-color: #ebe5c0;
+}
