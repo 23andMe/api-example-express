@@ -16,8 +16,6 @@ exports.index = function(req, res, scope){
                 }
                 request.get({ url: base_uri + '/genotype/?locations=rs2854464', headers: headers, json: true}, function (e, r, body) {
                     genotypes = body;
-                    console.log(names_by_id);
-                    console.log(genotypes);
                     res.render('result', {
                         names: names_by_id,
                         genotypes: genotypes
@@ -56,7 +54,6 @@ exports.receive_code = function(req, res, scope){
             },
             json: true }, function(e, r, body) {
                 if (!e && r.statusCode == 200) {
-                    console.log(body);
                     res.cookie('access_token', body.access_token, {signed: true});
                     res.redirect('/');
                 } else {
