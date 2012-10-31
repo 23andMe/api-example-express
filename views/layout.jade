@@ -1,7 +1,16 @@
 doctype 5
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        title Knees
+        link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Mate+SC', type='text/css')
+        link(rel='stylesheet', href='http://cdn.jsdelivr.net/foundation/3.1.1/stylesheets/foundation.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src='http://cdn.jsdelivr.net/foundation/3.1.1/javascripts/modernizr.foundation.js')
+        script(src='http://cdn.jsdelivr.net/foundation/3.1.1/javascripts/jquery.js')
+        script(src='http://cdn.jsdelivr.net/foundation/3.1.1/javascripts/foundation.min.js')
+    body
+        .row
+            .six.columns
+                img(src='http://upload.wikimedia.org/wikipedia/commons/8/8a/Gray351.png')
+            #content.four.columns.pull-two
+                block content

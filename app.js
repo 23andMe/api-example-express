@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -19,18 +18,23 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser('your secret here'));
+  app.use(express.cookieParser(process.env.COOKIE_SECRET));
   app.use(express.session());
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
+  app.set('scope', 'rs2854464%20basic%20names');
 });
 
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/', function(res, req) {
+    routes.index(res, req, app.get('scope'));
+});
+app.get('/receive_code/', function(res, req) {
+    routes.receive_code(res, req, app.get('scope'));
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
