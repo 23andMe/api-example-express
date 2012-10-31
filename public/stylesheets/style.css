@@ -4,10 +4,13 @@
 #content p {
     font-size: 16px;
 }
+#content p.disclaimer {
+    font-size: 12px;
+    color: #aaa;
+}
 .logo {
     vertical-align: -8px;
 }
-
 a {
-    color: #00B7FF;
+    color: #659EC7;
 }

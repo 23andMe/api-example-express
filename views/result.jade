@@ -4,6 +4,7 @@ block content
     h1 Your results
     each genotype, i in genotypes
         if genotype.rs2854464 == 'AA'
-            p <b>#{names[genotype.id]}</b> has the higher muscle strength <b>AA</b> genotype at ACVR1B, specifically tested in the knees. Beastly.
+            p <b>#{names[genotype.id]}</b> has the high muscle strength <b>AA</b> mutation at ACVR1B, specifically tested on the knees. Beastly.
         else
-            p <b>#{names[genotype.id]}</b> has genotype <b>#{genotype.rs2854464}</b>, and so <em>doesn't</em> have the <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3025799/"> ACVR1B mutation</a> that confers higher muscle strength. Shucks.
+            p <b>#{names[genotype.id]}</b> has genotype <b>#{genotype.rs2854464}</b>, and so <em>doesn't</em> have the mutation for high muscle strength. Shucks.
+    p.disclaimer Results tested at <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3025799/">ACVR1B on rs2854464</a>.
