@@ -37,3 +37,9 @@ I host the app on Heroku. You can, too. Just setup your [Heroku credentials for 
 ```
 heroku config:set REDIRECT_URI=http://herokuurl.com/receive_code/
 ```
+Make sure the ```CLIENT_ID```, ```CLIENT_SECRET```, and ```COOKIE_SECRET``` environment variables are set too.
+```
+heroku config:set CLIENT_ID=xxxx
+heroku config:set CLIENT_SECRET=xxxx
+heroku config:set COOKIE_SECRET=xxxx
+```
