@@ -1,8 +1,7 @@
 api-example-express
 ===================
 
-A Node.js/Express app built on 23andMe's API. Checks the ACVR1B gene for high muscle strength. 
-Try it at http://knees.herokuapp.com/.
+A Node.js/Express app built on 23andMe's API. Checks the ACVR1B gene for high muscle strength.
 
 Local
 ===
